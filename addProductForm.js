@@ -19,8 +19,15 @@ function addFormFunctionality() {
             name: phoneName,
             price: phonePrice
         };
-        products.push(newPhone);
-        renderProductList(products);
+
+        // Extragem produsele din localStorage
+        const localStorageProducts = getProducts();
+        // Modificam array-ul de produse
+        localStorageProducts.push(newPhone);
+        // Adaugam array-ul modificat in localStorage
+        setProducts(localStorageProducts);
+
+        renderProductList(localStorageProducts);
     })
 }
 
