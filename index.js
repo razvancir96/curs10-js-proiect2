@@ -14,10 +14,8 @@ const products = [
     }
 ];
 
-// Introducem produsele in localStorage
 const stringifiedProducts = JSON.stringify(products);
 localStorage.setItem("products", stringifiedProducts);
-// Extragem produsele din localStorage
 const localStorageProducts = localStorage.getItem("products");
 const parsedLocalStorageProducts = JSON.parse(localStorageProducts);
 console.log(parsedLocalStorageProducts);
